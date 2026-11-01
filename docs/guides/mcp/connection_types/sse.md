@@ -4,7 +4,7 @@
 
 ## What Happened to SSE?
 
-According to the [official MCP specification](https://modelcontextprotocol.io/specification/2025-06-18/basic/transports), SSE as a standalone transport was deprecated in protocol version 2024-11-05 and replaced by **Streamable HTTP**.
+In protocol revision **2025-03-26**, **Streamable HTTP** replaced the older HTTP+SSE transport defined in revision 2024-11-05. See the [official MCP specification](https://modelcontextprotocol.io/specification/2025-03-26/basic/transports#streamable-http).
 
 ## Current MCP Transport Options
 
@@ -17,7 +17,7 @@ The MCP specification now defines only **two standard transport mechanisms**:
 
 - **SSE functionality is still available** - but as part of Streamable HTTP, not as a standalone transport
 - **Streamable HTTP can use SSE** - for server-to-client streaming when needed
-- **No standalone SSE servers** - SSE is now integrated into the HTTP transport
+- **Legacy HTTP+SSE servers remain compatible** - Clients and servers can still support the older transport using the spec's [backwards-compatibility guidance](https://modelcontextprotocol.io/specification/2025-03-26/basic/transports#backwards-compatibility). Prefer Streamable HTTP for new integrations
 
 ## Migration Path
 
